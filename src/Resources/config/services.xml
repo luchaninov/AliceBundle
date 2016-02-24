@@ -5,7 +5,7 @@
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <services>
-        <service id="hautelook_alice.faker" class="Faker\Generator" lazy="true">
+        <service id="hautelook_alice.faker" class="Faker\Generator" >
             <argument>%hautelook_alice.locale%</argument>
             <call method="seed">
                 <argument>%hautelook_alice.seed%</argument>
@@ -14,15 +14,15 @@
 
         <service id="hautelook_alice.alice.processor_chain"
                  class="Hautelook\AliceBundle\Alice\ProcessorChain"
-                 lazy="true" />
+                  />
 
         <service id="hautelook_alice.faker.provider_chain"
                  class="Hautelook\AliceBundle\Faker\Provider\ProviderChain"
-                 lazy="true" />
+                  />
 
         <service id="hautelook_alice.doctrine.executor.fixtures_executor"
                  class="Hautelook\AliceBundle\Doctrine\DataFixtures\Executor\FixturesExecutor"
-                 lazy="true" />
+                  />
 
         <service id="hautelook_alice.alice.fixtures.loader"
                  class="Hautelook\AliceBundle\Alice\DataFixtures\Fixtures\Loader">
@@ -46,7 +46,7 @@
 
         <service id="hautelook_alice.doctrine.command_factory"
                  class="Hautelook\AliceBundle\Doctrine\Command\CommandFactory"
-                 lazy="true" />
+                  />
     </services>
 
 </container>
